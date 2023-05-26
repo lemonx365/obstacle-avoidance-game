@@ -108,28 +108,28 @@ class Component {
   }
 
   hitBottom() {
-    // const rockbottom = game.canvas.height - this.height;
-    // if (this.y > rockbottom) {
-    //   this.y = rockbottom;
-    //   this.gravitySpeed = 0;
-    // }
+    const rockbottom = game.canvas.height - this.height;
+    if (this.y > rockbottom) {
+      this.y = rockbottom;
+      this.gravitySpeed = 0;
+    }
   }
 
   crashWith(otherobj) {
-    // const myleft = this.x;
-    // const myright = this.x + this.width;
-    // const mytop = this.y;
-    // const mybottom = this.y + this.height;
-    // const otherleft = otherobj.x;
-    // const otherright = otherobj.x + otherobj.width;
-    // const othertop = otherobj.y;
-    // const otherbottom = otherobj.y + otherobj.height;
-    // return !(
-    //   mybottom < othertop ||
-    //   mytop > otherbottom ||
-    //   myright < otherleft ||
-    //   myleft > otherright
-    // );
+    const myleft = this.x;
+    const myright = this.x + this.width;
+    const mytop = this.y;
+    const mybottom = this.y + this.height;
+    const otherleft = otherobj.x;
+    const otherright = otherobj.x + otherobj.width;
+    const othertop = otherobj.y;
+    const otherbottom = otherobj.y + otherobj.height;
+    return !(
+      mybottom < othertop ||
+      mytop > otherbottom ||
+      myright < otherleft ||
+      myleft > otherright
+    );
   }
 }
 
